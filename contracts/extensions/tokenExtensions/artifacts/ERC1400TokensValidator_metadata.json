@@ -1,0 +1,2313 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "AllowlistAdminAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "AllowlistAdminRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "AllowlistedAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "AllowlistedRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "BlocklistAdminAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "BlocklistAdminRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "BlocklistedAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "BlocklistedRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "CertificateSignerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "CertificateSignerRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "expiration",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "secretHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "HoldCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "heldValue",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "transferredValue",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "secret",
+						"type": "bytes32"
+					}
+				],
+				"name": "HoldExecuted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "heldValue",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "transferredValue",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "secret",
+						"type": "bytes32"
+					}
+				],
+				"name": "HoldExecutedAndKeptOpen",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ERC1400TokensValidator.HoldStatusCode",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"name": "HoldReleased",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldExpiration",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newExpiration",
+						"type": "uint256"
+					}
+				],
+				"name": "HoldRenewed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "Paused",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "PauserAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "PauserRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "Unpaused",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addAllowlistAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addAllowlisted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addBlocklistAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addBlocklisted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addCertificateSigner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addPauser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOnHold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOnHoldByPartition",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "interfaceHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "canImplementInterfaceForAddress",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "token",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "payload",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "partition",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "address",
+								"name": "operator",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "data",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "operatorData",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct IERC1400TokensValidator.ValidateData",
+						"name": "data",
+						"type": "tuple"
+					}
+				],
+				"name": "canValidate",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secret",
+						"type": "bytes32"
+					}
+				],
+				"name": "executeHold",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secret",
+						"type": "bytes32"
+					}
+				],
+				"name": "executeHoldAndKeepOpen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					}
+				],
+				"name": "granularityByPartition",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timeToExpiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secretHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "certificate",
+						"type": "bytes"
+					}
+				],
+				"name": "hold",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timeToExpiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secretHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "certificate",
+						"type": "bytes"
+					}
+				],
+				"name": "holdFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secretHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "certificate",
+						"type": "bytes"
+					}
+				],
+				"name": "holdFromWithExpirationDate",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secretHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "certificate",
+						"type": "bytes"
+					}
+				],
+				"name": "holdWithExpirationDate",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isAllowlistAdmin",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isAllowlisted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isBlocklistAdmin",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isBlocklisted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isCertificateSigner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isPauser",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "pause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timeToExpiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secretHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "certificate",
+						"type": "bytes"
+					}
+				],
+				"name": "preHoldFor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secretHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "certificate",
+						"type": "bytes"
+					}
+				],
+				"name": "preHoldForWithExpirationDate",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "enum ERC1400TokensValidator.CertificateValidation",
+						"name": "certificateActivated",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "allowlistActivated",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "blocklistActivated",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "granularityByPartitionActivated",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "holdsActivated",
+						"type": "bool"
+					},
+					{
+						"internalType": "address[]",
+						"name": "operators",
+						"type": "address[]"
+					}
+				],
+				"name": "registerTokenSetup",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					}
+				],
+				"name": "releaseHold",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "removeAllowlistAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "removeAllowlisted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "removeBlocklistAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "removeBlocklisted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "removeCertificateSigner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "removePauser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timeToExpiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "certificate",
+						"type": "bytes"
+					}
+				],
+				"name": "renewHold",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "certificate",
+						"type": "bytes"
+					}
+				],
+				"name": "renewHoldWithExpirationDate",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "renounceAllowlistAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "renounceBlocklistAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "renounceCertificateSigner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "renouncePauser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "holdId",
+						"type": "bytes32"
+					}
+				],
+				"name": "retrieveHoldData",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "notary",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secretHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secret",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "enum ERC1400TokensValidator.HoldStatusCode",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "retrieveTokenSetup",
+				"outputs": [
+					{
+						"internalType": "enum ERC1400TokensValidator.CertificateValidation",
+						"name": "",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "granularity",
+						"type": "uint256"
+					}
+				],
+				"name": "setGranularityByPartition",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "spendableBalanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "spendableBalanceOfByPartition",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "payload",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "operatorData",
+						"type": "bytes"
+					}
+				],
+				"name": "tokensToValidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "totalSupplyOnHold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "partition",
+						"type": "bytes32"
+					}
+				],
+				"name": "totalSupplyOnHoldByPartition",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "unpause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "usedCertificateNonce",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					}
+				],
+				"name": "usedCertificateSalt",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"balanceOnHold(address,address)": {
+					"details": "Get balance on hold of a tokenholder."
+				},
+				"balanceOnHoldByPartition(address,bytes32,address)": {
+					"details": "Get balance on hold of a tokenholder for a specific partition."
+				},
+				"canValidate((address,bytes,bytes32,address,address,address,uint256,bytes,bytes))": {
+					"details": "Verify if a token transfer can be executed or not, on the validator's perspective.",
+					"params": {
+						"data": "The struct containing the validation information."
+					},
+					"returns": {
+						"_0": "'true' if the token transfer can be validated, 'false' if not."
+					}
+				},
+				"executeHold(address,bytes32,uint256,bytes32)": {
+					"details": "Execute hold."
+				},
+				"executeHoldAndKeepOpen(address,bytes32,uint256,bytes32)": {
+					"details": "Execute hold and keep open."
+				},
+				"granularityByPartition(address,bytes32)": {
+					"details": "Get granularity for a given partition.",
+					"params": {
+						"partition": "Name of the partition.",
+						"token": "Token address."
+					},
+					"returns": {
+						"_0": "Granularity of the partition."
+					}
+				},
+				"hold(address,bytes32,address,address,bytes32,uint256,uint256,bytes32,bytes)": {
+					"details": "Create a new token hold."
+				},
+				"holdFrom(address,bytes32,address,address,address,bytes32,uint256,uint256,bytes32,bytes)": {
+					"details": "Create a new token hold on behalf of the token holder."
+				},
+				"holdFromWithExpirationDate(address,bytes32,address,address,address,bytes32,uint256,uint256,bytes32,bytes)": {
+					"details": "Create a new token hold with expiration date on behalf of the token holder."
+				},
+				"holdWithExpirationDate(address,bytes32,address,address,bytes32,uint256,uint256,bytes32,bytes)": {
+					"details": "Create a new token hold with expiration date."
+				},
+				"pause(address)": {
+					"details": "called by the owner to pause, triggers stopped state"
+				},
+				"paused(address)": {
+					"returns": {
+						"_0": "true if the contract is paused, false otherwise."
+					}
+				},
+				"preHoldFor(address,bytes32,address,address,bytes32,uint256,uint256,bytes32,bytes)": {
+					"details": "Create a new token pre-hold."
+				},
+				"preHoldForWithExpirationDate(address,bytes32,address,address,bytes32,uint256,uint256,bytes32,bytes)": {
+					"details": "Create a new token pre-hold with expiration date."
+				},
+				"registerTokenSetup(address,uint8,bool,bool,bool,bool,address[])": {
+					"details": "Register token setup."
+				},
+				"releaseHold(address,bytes32)": {
+					"details": "Release token hold."
+				},
+				"renewHold(address,bytes32,uint256,bytes)": {
+					"details": "Renew hold."
+				},
+				"renewHoldWithExpirationDate(address,bytes32,uint256,bytes)": {
+					"details": "Renew hold with expiration time."
+				},
+				"retrieveHoldData(address,bytes32)": {
+					"details": "Retrieve hold data."
+				},
+				"retrieveTokenSetup(address)": {
+					"details": "Get the list of token controllers for a given token.",
+					"returns": {
+						"_0": "Setup of a given token."
+					}
+				},
+				"setGranularityByPartition(address,bytes32,uint256)": {
+					"details": "Set partition granularity"
+				},
+				"spendableBalanceOf(address,address)": {
+					"details": "Get spendable balance of a tokenholder."
+				},
+				"spendableBalanceOfByPartition(address,bytes32,address)": {
+					"details": "Get spendable balance of a tokenholder for a specific partition."
+				},
+				"tokensToValidate(bytes,bytes32,address,address,address,uint256,bytes,bytes)": {
+					"details": "Function called by the token contract before executing a transfer.",
+					"params": {
+						"data": "Extra information.",
+						"from": "Token holder.",
+						"operator": "Address which triggered the balance decrease (through transfer or redemption).",
+						"operatorData": "Extra information, attached by the operator (if any).",
+						"partition": "Name of the partition (left empty for ERC20 transfer).",
+						"payload": "Payload of the initial transaction.",
+						"to": "Token recipient for a transfer and 0x for a redemption.",
+						"value": "Number of tokens the token holder balance is decreased by."
+					}
+				},
+				"totalSupplyOnHold(address)": {
+					"details": "Total supply on hold."
+				},
+				"totalSupplyOnHoldByPartition(address,bytes32)": {
+					"details": "Total supply on hold for a specific partition."
+				},
+				"unpause(address)": {
+					"details": "called by the owner to unpause, returns to normal state"
+				},
+				"usedCertificateNonce(address,address)": {
+					"details": "Get state of certificate (used or not).",
+					"params": {
+						"sender": "Address whom to check the counter of.",
+						"token": "Token address."
+					},
+					"returns": {
+						"_0": "uint256 Number of transaction already sent for this token contract."
+					}
+				},
+				"usedCertificateSalt(address,bytes32)": {
+					"details": "Get state of certificate (used or not).",
+					"params": {
+						"salt": "First 32 bytes of certificate whose validity is being checked.",
+						"token": "Token address."
+					},
+					"returns": {
+						"_0": "bool 'true' if certificate is already used, 'false' if not."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extensions/tokenExtensions/ERC1400TokensValidator.sol": "ERC1400TokensValidator"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IERC1400.sol": {
+			"keccak256": "0x64a1a7416934b18cbd39818a937a8290f7df9091aedaea3361401a2dbb0ca159",
+			"urls": [
+				"bzz-raw://8bd8c333c0ad9aefc9748dfc9e36c940aa6b6281856a19855eb21987818955dd",
+				"dweb:/ipfs/QmckKQCVeBTNdvA4WscVjeZduCG1NNTzxVdKFSX2XGMmX7"
+			]
+		},
+		"contracts/extensions/tokenExtensions/ERC1400TokensValidator.sol": {
+			"keccak256": "0xafd96c5f21530912227ef3a56a594fe6abbc0fa098e13d8e458c54ce8379e9d9",
+			"urls": [
+				"bzz-raw://2cd5f16bc2d746f27ca173269c2f273e928ca723b205aa8ac5fbf9c718248962",
+				"dweb:/ipfs/QmamCxGd3Q73MUvXE6jrksgwUvH7S7LWUYTVtH9jRkoH29"
+			]
+		},
+		"contracts/extensions/tokenExtensions/IERC1400TokensValidator.sol": {
+			"keccak256": "0x96b357e319f554a2e46abf704f0971d87c66f916f483dfd2bdbf3e2e0b78545c",
+			"urls": [
+				"bzz-raw://1966b60443eec753a27cfc7c62e336ea9e3f7fba3736a4c417669187a9d5e202",
+				"dweb:/ipfs/QmWFGYCoKKkoXGXwDE1LjhRHyBUhVQ8dbfmdVsZfWYPjAv"
+			]
+		},
+		"contracts/interface/ERC1820Implementer.sol": {
+			"keccak256": "0x5f191dc5d0a28fdcd1f1910fabbf31858c5782b6f4768f1fcd46c59cb9d6a5ed",
+			"urls": [
+				"bzz-raw://ca669d36145f0afabda3b05802a5eb174933f0cd649bed6360e3108332141e17",
+				"dweb:/ipfs/Qme1Jcpof8dTpDEuFjKZ1NCUSWVi6XxDqgdxUXNJyRR9re"
+			]
+		},
+		"contracts/interface/IERC1643.sol": {
+			"keccak256": "0x1148340ae449f3826dd691fb042a57d07337714c66096f8dd20ce1dbfe2c60fd",
+			"urls": [
+				"bzz-raw://406ed78b6254cd6833ea469759cfde23585e03c92b1bacb08b6d662f5ddc56c8",
+				"dweb:/ipfs/QmXTSonY6bT4F8N7QdRdaosw8NsPeLFFAjtCkNbb49XdYc"
+			]
+		},
+		"contracts/openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981",
+				"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51"
+			]
+		},
+		"contracts/openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x61437cb513a887a1bbad006e7b1c8b414478427d33de47c5600af3c748f108da",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2c3d0973630ed74f2b5ce3944677a885dc70ec32fc83b35f55045a10224da32b",
+				"dweb:/ipfs/QmbefZ5RoEZKNHXCALfh683PnaNYzKPcKMFjyY1DVAgq8A"
+			]
+		},
+		"contracts/openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"contracts/openzeppelin/contracts/utils/introspection/IERC1820Registry.sol": {
+			"keccak256": "0x6e306f9ab28416a9e5931f0b6e264676e8ac68fad184f9a9d8bb125c6ec23bc3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd7fe961c914caa1fcc8223d446c1582aec4f2a32d2f06cf09c938b72cf8ce11",
+				"dweb:/ipfs/QmPfEfqtUh9SA86br28HfmMyVSBe22B3oPwF8iACCF4evY"
+			]
+		},
+		"contracts/openzeppelin/contracts/utils/math/SafeMath.sol": {
+			"keccak256": "0xa2f576be637946f767aa56601c26d717f48a0aff44f82e46f13807eea1009a21",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://973868f808e88e21a1a0a01d4839314515ee337ad096286c88e41b74dcc11fc2",
+				"dweb:/ipfs/QmfYuZxRfx2J2xdk4EXN7jKg4bUYEMTaYk9BAw9Bqn4o2Y"
+			]
+		},
+		"contracts/roles/AllowlistAdminRole.sol": {
+			"keccak256": "0xa682cd2438342802e52fae2924826f4266d11113f5f30b40587af8691d05826f",
+			"urls": [
+				"bzz-raw://443f0c6b9369441069409f583e169fa79253663d479e176959df6268116d51d6",
+				"dweb:/ipfs/QmTbAg7bP33Q4jzckRpbfDSpSvn4DttV6shCthL3ocGCn7"
+			]
+		},
+		"contracts/roles/AllowlistedRole.sol": {
+			"keccak256": "0x4ddf57e4ab62da38030d6843c450fb0b749993481e2fe207cbde3871961d5636",
+			"urls": [
+				"bzz-raw://513cff72e4f8dab41f1ba41d855dee6b6ff6de99cac6528473108c48ec0ff731",
+				"dweb:/ipfs/QmWH7ZUhmgghtd6NYMuvx7uojf9wXSszukrUV1q63BExSS"
+			]
+		},
+		"contracts/roles/BlocklistAdminRole.sol": {
+			"keccak256": "0x7bde2ba9bd805c7fcfb16ba1b6028e078f46f2b82e8f559aaf00b8342b587fe9",
+			"urls": [
+				"bzz-raw://99f8a32db9642fb9acca4b199f6e0dc1c63b15669a4ddfc02f29c7adb7521c2d",
+				"dweb:/ipfs/QmW1N9RHYUVVNksvcRXDGytEtoothijW9adXyKowTnBK8N"
+			]
+		},
+		"contracts/roles/BlocklistedRole.sol": {
+			"keccak256": "0xf2264840d35ec2e5d78f56cf107a26905e417996569d60f3dfc295ff34bbeb15",
+			"urls": [
+				"bzz-raw://a002e6834fc6070df85abb798a89f96e14cac09e02d3a66109218ed08369e15a",
+				"dweb:/ipfs/Qmc4d3ujZ8yrRXWMMrH5T2qzYGZyBRaGTgDodpv5qAS8V2"
+			]
+		},
+		"contracts/roles/CertificateSignerRole.sol": {
+			"keccak256": "0x3df52dfd0cff66d84c1cd73b7aa04fa5a6370b9a26cec2179a93c8b313528122",
+			"urls": [
+				"bzz-raw://16bcfe786f6c1f53d8f0368de8c2d20ec9782a819f69bbbd41065e6951ba13ef",
+				"dweb:/ipfs/Qmb1J8Z7dmDJ4NsxkNWuYjpFCAcwPfF8GGkF7TkFUbV9SK"
+			]
+		},
+		"contracts/roles/PauserRole.sol": {
+			"keccak256": "0x4e61b6084651f467ac21eb3a2efe1b90871fe5bbf54ba088734e9e83ec54008e",
+			"urls": [
+				"bzz-raw://b94441555dee2ea06591309ac21eeef899624fd2325b0f4450211f33734c8769",
+				"dweb:/ipfs/Qmaz7X6S6HxdxEkbWdvbxYUBjZo6fixSy6WRrG7iskspqF"
+			]
+		},
+		"contracts/roles/Roles.sol": {
+			"keccak256": "0x90ac2a725a9e547642258ed98bcff321146bfa680d4c68b781e0d91ea7cfd0d4",
+			"urls": [
+				"bzz-raw://1b88a9d1aa79dd0e127524645576684b0930c38c4583986182a071c3039f41a2",
+				"dweb:/ipfs/QmdS7fm3shy6QE5zsiMogSFjzvG9qBu4hv6UmZXjHt5n69"
+			]
+		},
+		"contracts/tools/DomainAware.sol": {
+			"keccak256": "0x1e4679ad9b08b0d111457185b2b9abfead090c98c4ed0708125356325e911c8b",
+			"urls": [
+				"bzz-raw://0ae027eb78281c5b9f0e7ba1f4149ee06a4364ccc86070ceb569362daf1b1c50",
+				"dweb:/ipfs/Qma19Q2ZMTSpoBHeep7ZQyW4e383arRDufs9bU1sAB8Z4Q"
+			]
+		},
+		"contracts/tools/ERC1820Client.sol": {
+			"keccak256": "0xdb848150a4852c045c90a0405100ed434cb73d8e3e5bfb80e8b9debd77210aed",
+			"urls": [
+				"bzz-raw://75d37f40758e2219d5ac7a85317b3491859a267e435e08d95690acc7d51db34b",
+				"dweb:/ipfs/QmbyLxfZ9Meye8rtb5T1extG8LQA9g3AH3DHC4smrukxEx"
+			]
+		},
+		"contracts/tools/Pausable.sol": {
+			"keccak256": "0x50408db0a442b72a072c16652b6ea7bc35bd5493dddc307ccb85664a2cb28146",
+			"urls": [
+				"bzz-raw://d6f137eb5de377f6a86138d73b2129d6a6272e8808ca7269f99b1af82fadd786",
+				"dweb:/ipfs/QmX87E9iFtF7AUvPpRHL3FWxW5axZvpyGpxx53BZQiZheM"
+			]
+		}
+	},
+	"version": 1
+}

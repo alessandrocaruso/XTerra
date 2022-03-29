@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "interfaceHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "canImplementInterfaceForAddress",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"canImplementInterfaceForAddress(bytes32,address)": {
+					"params": {
+						"addr": "Address for which the contract will implement the interface",
+						"interfaceHash": "keccak256 hash of the name of the interface"
+					},
+					"returns": {
+						"_0": "ERC1820_ACCEPT_MAGIC only if the contract implements 'interfaceHash' for the address 'addr'."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"canImplementInterfaceForAddress(bytes32,address)": {
+					"notice": "Indicates whether the contract implements the interface 'interfaceHash' for the address 'addr' or not."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/tools/ERC1820Registry.sol": "ERC1820Implementer"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/openzeppelin/contracts/utils/introspection/IERC1820Registry.sol": {
+			"keccak256": "0x6e306f9ab28416a9e5931f0b6e264676e8ac68fad184f9a9d8bb125c6ec23bc3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd7fe961c914caa1fcc8223d446c1582aec4f2a32d2f06cf09c938b72cf8ce11",
+				"dweb:/ipfs/QmPfEfqtUh9SA86br28HfmMyVSBe22B3oPwF8iACCF4evY"
+			]
+		},
+		"contracts/tools/ERC1820Registry.sol": {
+			"keccak256": "0xf625c82ac6530007e7f96977d1ec4ba842ea696c1ed046650eb70fa0614bf2a0",
+			"urls": [
+				"bzz-raw://1e60d68f0801b143c38f0256b6c1d572403dfa1a2c09723b52869a2287d8616b",
+				"dweb:/ipfs/QmVh6G9JEAcMpzSGjMGNRxpwdyuU43PPnarJGUeWy51p85"
+			]
+		}
+	},
+	"version": 1
+}

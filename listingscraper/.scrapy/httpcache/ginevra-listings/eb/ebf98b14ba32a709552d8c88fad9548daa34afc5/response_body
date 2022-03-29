@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /bin/
+Disallow: /pdf/generate
+Disallow: /de/pdf/generate
+Disallow: /fr/pdf/creer
+Disallow: /resources/Dokumente.ashx
+
+sitemap: https://www.newhome.ch/sitemap.xml

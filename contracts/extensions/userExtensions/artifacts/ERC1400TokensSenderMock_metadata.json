@@ -1,0 +1,190 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "interfaceHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "canImplementInterfaceForAddress",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "canTransfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "tokensToTransfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extensions/userExtensions/ERC1400TokensSender.sol": "ERC1400TokensSenderMock"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extensions/userExtensions/ERC1400TokensSender.sol": {
+			"keccak256": "0x60877467e74124c8c893e04b803eada7b3f90cff3c729c478c6ca79f860ce5dc",
+			"urls": [
+				"bzz-raw://42002e50c84aa215b913790a8556aa372a9eeeab0c4217d4342efb1d7e20b36d",
+				"dweb:/ipfs/Qma73CPP2xRTieUntN2KtgUZYq42gFfGoJk7u6HaLohAi3"
+			]
+		},
+		"contracts/extensions/userExtensions/IERC1400TokensSender.sol": {
+			"keccak256": "0x01040b5c0c97bec4ba23e8704d2bec3a1b689287dc5b8c50759f697a51e10d9e",
+			"urls": [
+				"bzz-raw://f95ce73f9fdded66fa18fbad61a6b4f646c1f45d4ca37f3236cb208b71b5cd35",
+				"dweb:/ipfs/QmPoXsqqj4gABiaArfpfUbiePmxQFVPGmwXfiEvVykwuL7"
+			]
+		},
+		"contracts/interface/ERC1820Implementer.sol": {
+			"keccak256": "0x5f191dc5d0a28fdcd1f1910fabbf31858c5782b6f4768f1fcd46c59cb9d6a5ed",
+			"urls": [
+				"bzz-raw://ca669d36145f0afabda3b05802a5eb174933f0cd649bed6360e3108332141e17",
+				"dweb:/ipfs/Qme1Jcpof8dTpDEuFjKZ1NCUSWVi6XxDqgdxUXNJyRR9re"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "interfaceHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "canImplementInterfaceForAddress",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interface/ERC1820Implementer.sol": "ERC1820Implementer"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interface/ERC1820Implementer.sol": {
+			"keccak256": "0x787313c590b50d6c0cc28cf322119dae8fec2ad30d0b78475407c094eeeab2fe",
+			"urls": [
+				"bzz-raw://d9395f59c03bc54eca2d3b373b4ab6d7f1d3e66783d0b437c730eb6485216570",
+				"dweb:/ipfs/QmXHfE1D3Q7f8cgJtvkyJJm2jSt3UUt5hFtQCSh5ZYLevz"
+			]
+		}
+	},
+	"version": 1
+}

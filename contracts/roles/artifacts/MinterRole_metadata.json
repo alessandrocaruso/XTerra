@@ -1,0 +1,132 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "MinterAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "MinterRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addMinter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isMinter",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "removeMinter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceMinter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Minters are responsible for minting new tokens.",
+			"kind": "dev",
+			"methods": {},
+			"title": "MinterRole",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/roles/MinterRole.sol": "MinterRole"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/roles/MinterRole.sol": {
+			"keccak256": "0x318d73a86276b5c446b93a81875bb1b4c8c1c57c2e8bc65293638687e539c161",
+			"urls": [
+				"bzz-raw://b3a44139e4bf6b0454f61976b978ca7109ad9916605290aed8d02495a0531e49",
+				"dweb:/ipfs/QmWhDoHjhjfLUvkGkYYGwYiAb8V4UfMJgbKw9DawCdwHfj"
+			]
+		},
+		"contracts/roles/Roles.sol": {
+			"keccak256": "0x90ac2a725a9e547642258ed98bcff321146bfa680d4c68b781e0d91ea7cfd0d4",
+			"urls": [
+				"bzz-raw://1b88a9d1aa79dd0e127524645576684b0930c38c4583986182a071c3039f41a2",
+				"dweb:/ipfs/QmdS7fm3shy6QE5zsiMogSFjzvG9qBu4hv6UmZXjHt5n69"
+			]
+		}
+	},
+	"version": 1
+}

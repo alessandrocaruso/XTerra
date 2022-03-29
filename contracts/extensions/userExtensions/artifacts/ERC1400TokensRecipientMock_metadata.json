@@ -1,0 +1,190 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "interfaceHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "canImplementInterfaceForAddress",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "canReceive",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "tokensReceived",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extensions/userExtensions/ERC1400TokensRecipient.sol": "ERC1400TokensRecipientMock"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extensions/userExtensions/ERC1400TokensRecipient.sol": {
+			"keccak256": "0xcf720efb792be04eea42c629ccd9ec6b912b7479bb2e13ad331bbf5622fb3ef7",
+			"urls": [
+				"bzz-raw://53752d75e8fbf1d5a72a214e2def1af022aad8236531d7677b44275f87ae29f7",
+				"dweb:/ipfs/QmRnZzjvBG9uG45BjeyJ1keyHfYc17rfNkfqZcPWG7oV2t"
+			]
+		},
+		"contracts/extensions/userExtensions/IERC1400TokensRecipient.sol": {
+			"keccak256": "0x6bc583d1a37e75b4c09e38477ecd3eb0ecb00a4a437d352d36bacdf3b0643f6e",
+			"urls": [
+				"bzz-raw://69461c2686518549fad82967459de7e9e9436601736f2c288a328f5660d41906",
+				"dweb:/ipfs/QmTrZ5rbxcQo3poz1A5AXSG4S4swMA3EtNo5aWx2VbfrPN"
+			]
+		},
+		"contracts/interface/ERC1820Implementer.sol": {
+			"keccak256": "0x787313c590b50d6c0cc28cf322119dae8fec2ad30d0b78475407c094eeeab2fe",
+			"urls": [
+				"bzz-raw://d9395f59c03bc54eca2d3b373b4ab6d7f1d3e66783d0b437c730eb6485216570",
+				"dweb:/ipfs/QmXHfE1D3Q7f8cgJtvkyJJm2jSt3UUt5hFtQCSh5ZYLevz"
+			]
+		}
+	},
+	"version": 1
+}

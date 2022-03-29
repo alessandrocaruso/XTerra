@@ -1,0 +1,337 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "CertificateSignerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "CertificateSignerRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "certId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "approvedUser",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "docURI",
+						"type": "string"
+					}
+				],
+				"name": "CreateCertificate",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addCertificateSigner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_certName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_certDescription",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_expiredDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_docURI",
+						"type": "string"
+					}
+				],
+				"name": "approveCertificate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "certificateListByAddress",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "certCreator",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "certName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "certDescription",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "docURI",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "issuedDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiredDate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isCertificateSigner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "removeCertificateSigner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "renounceCertificateSigner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "viewCertificateInfo",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CertificateSigner.sol": "CertificateSigner"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CertificateSigner.sol": {
+			"keccak256": "0xa356a96c3a3b63968d009601bc95b65df483b74abdc4a8755721038fa453f1cf",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://b595fd6caaa9f22ed9a6fd1864d00b2280960d0fc1d3378996eda5af21402862",
+				"dweb:/ipfs/QmUWSuVqSEF96ZxW1F3GQHuLa6WZ7rvWMJ2vC1XxuK47Fq"
+			]
+		},
+		"contracts/roles/CertificateSignerRole.sol": {
+			"keccak256": "0x3df52dfd0cff66d84c1cd73b7aa04fa5a6370b9a26cec2179a93c8b313528122",
+			"urls": [
+				"bzz-raw://16bcfe786f6c1f53d8f0368de8c2d20ec9782a819f69bbbd41065e6951ba13ef",
+				"dweb:/ipfs/Qmb1J8Z7dmDJ4NsxkNWuYjpFCAcwPfF8GGkF7TkFUbV9SK"
+			]
+		},
+		"contracts/roles/Roles.sol": {
+			"keccak256": "0x90ac2a725a9e547642258ed98bcff321146bfa680d4c68b781e0d91ea7cfd0d4",
+			"urls": [
+				"bzz-raw://1b88a9d1aa79dd0e127524645576684b0930c38c4583986182a071c3039f41a2",
+				"dweb:/ipfs/QmdS7fm3shy6QE5zsiMogSFjzvG9qBu4hv6UmZXjHt5n69"
+			]
+		}
+	},
+	"version": 1
+}
